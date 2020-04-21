@@ -1,0 +1,198 @@
+.widget {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: #fff;
+    background: #262626 url('../images/bg.png') no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: 'Open sans';
+
+    .dev-link {
+        position: fixed;
+        right: 1.8rem;
+        padding: 1rem;
+        background: #009688;
+        margin: 0;
+        border-radius: 50%;
+        height: .8rem;
+        width: .8rem;
+        color: #fff;
+
+        svg {
+            margin-left: -3px;
+            margin-top: -4px;
+        }
+    }
+
+    .title {
+        margin: 0 auto;
+
+        h2 {
+            margin-top: .4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    .country {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: .4rem;
+        margin-top: .5rem;
+
+        >* {
+            flex: 1 0 45%;
+            border-radius: .3rem;
+            margin: 0 0;
+            text-transform: none;
+            cursor: pointer;
+            border: 1px solid #303030;
+            overflow: hidden;
+            display: inline-block;
+
+            &.active {
+                background: #303030;
+            }
+
+            &:first-child {
+                margin-right: .3rem;
+            }
+
+            &:last-child {
+                margin-left: .3rem;
+            }
+        }
+
+        &--single {
+            select {
+                background: transparent;
+                color: #fff;
+                border: none;
+                font-size: 1rem;
+                overflow: hidden;
+                padding: 0px .3rem;
+                display: block;
+                width: 100%;
+                height: 2rem;
+                cursor: pointer;
+
+                option {
+                    color: #000;
+                }
+            }
+
+            select:focus {
+                outline: none;
+                border-color: red;
+            }
+        }
+
+        &--global {
+            height: 2rem;
+            line-height: 2rem;
+            margin-top: 0;
+        }
+    }
+
+    .data-grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.3rem;
+
+        .death {
+            color: #9E9E9E;
+        }
+
+        .confirmed {
+            color: #E71E62;
+        }
+
+        .recovered {
+            color: #00E676;
+        }
+
+        >* {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            flex: 1 0 30%;
+
+            .item {
+                background: #303030;
+                margin: .4rem;
+                border-radius: 0.5rem;
+
+                >.data--count {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    padding-top: .8rem;
+                    padding-bottom: 0.3rem;
+                }
+
+                >.data--name {
+                    margin: 0;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    padding-bottom: .8rem;
+                    color: #B7B7B7;
+                }
+            }
+        }
+
+    }
+
+    .info {
+        text-transform: none;
+        font-size: .7rem;
+        margin-top: .5rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        >* {
+            width: 50%;
+            margin: .4rem;
+            color: #B7B7B7;
+
+            &.update-date {
+                text-align: left;
+            }
+
+            &.source {
+                text-align: right;
+            }
+        }
+
+        p {
+            display: inline;
+        }
+
+
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .data-grid {
+        >* {
+            flex-direction: row;
+            flex: 1 1;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/app.min.css" />
+</head>
+
+<body>
+    <div id="wp-covid-update" class="widget">
+        <a class="dev-link" href="//github.com/alaminfirdows" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+        </a>
+        <div class="title">
+            <h2>Covid-19 Update</h2>
+        </div>
+        <div class="country">
+            <div class="country--single">
+                <select name="country">
+                    <option value="" selected disabled>Select a country</option>
+                </select>
+            </div>
+            <div class="country--global active">
+                <span>Global</span>
+            </div>
+        </div>
+
+        <div class="data-grid">
+            <div class="death">
+                <div class="item new">
+                    <h2 class="data--count">0</h2>
+                    <p class="data--name">Death in 24H</p>
+                </div>
+                <div class="item total">
+                    <h2 class="data--count">0</h2>
+                    <p class="data--name">Total Death</p>
+                </div>
+            </div>
+            <div class="confirmed">
+                <div class="item new">
+                    <h2 class="data--count">0</h2>
+                    <p class="data--name">Confirmed in 24H</p>
+                </div>
+                <div class="item total">
+                    <h2 class="data--count">0</h2>
+                    <p class="data--name">Total Confirmed</p>
+                </div>
+            </div>
+            <div class="recovered">
+                <div class="item new">
+                    <h2 class="data--count">0</h2>
+                    <p class="data--name">Recovered in 24H</p>
+                </div>
+                <div class="item total">
+                    <h2 class="data--count">0</h2>
+                    <p class="data--name">Total Recovered</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            <p class="update-date">
+                Updated at: <span class="date">-</span>
+            </p>
+            <p class="source">Source: covid19api.com</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="assets/scripts/app.min.js"></script>
+</body>
+
+</html>
